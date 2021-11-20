@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --green: #27ae60;
+    --darkColor: #219150;
+    --black: #444;
+    --lightColor: #666;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --borderHover: .1rem solid var(var(--black));
+    --boxShadow: 0 .5rem 1rem rgba(0,0,0,.1rem);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: smooth;
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--black);
+}
+
+
+
+.header .header1{
+    background: white;
+    padding: 1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .header1 .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+.header .header1 .logo i{
+    color: var(--green);
+}
+.header .header1 .searchForm{
+    width: 50rem;
+    height: 5rem;
+    border: var(--border);
+    overflow: hidden;
+    background: white;
+    display: flex; align-items: center;
+    border-radius: 0.5rem;
+}
+.header .header1 .searchForm input{
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+}
+.header .header1 .searchForm label{
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.header .header1 .searchForm label:hover{
+    color: var(--green);
+
+}
+.header .header1 .icons div,
+.header .header1 .icons a{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.header .header1 .icons div:hover,
+.header .header1 .icons a:hover{
+    color: var(--green);
+}
+
+#searchBtn{
+    display: none;
+}
+.header .header2{
+    background: var(--green);
+}
+.header .header2 .navbar{
+    text-align: center;
+}
+.header .header2 .navbar a{
+    color: white;
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.7rem;
+}
+.header .header2 .navbar a:hover{
+    background: var(--darkColor);
+}
+/* for js scrollY */
+.header .header2.active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+body{
+    height: 300rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header .header1{
+        padding: 2rem;
+    }
+}
+
+@media(max-width:768px){
+    .header .header2{
+        display: none;
+    }
+    #searchBtn{
+        display: inline-block;
+    }
+    .header .header1{
+        box-shadow: var(--boxShadow);
+        position: relative;
+    }
+    .header .header1 .searchForm{
+        position: absolute;
+        top: -115%; right: 2rem;
+        width: 90%;
+        box-shadow: var(--boxShadow);
+    }
+
+    .header .header1 .searchForm.active{
+        top: 115%;
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
