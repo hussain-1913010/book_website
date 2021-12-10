@@ -4,6 +4,15 @@ document.querySelector('#searchBtn').onclick = () => {
 }
 
 
+let loginForm = document.querySelector('.loginFormContainer');
+
+document.querySelector('#loginBtn').onclick = () => {
+    loginForm.classList.toggle('active');
+}
+document.querySelector('#closeLoginBtn').onclick = () => {
+    loginForm.classList.toggle('active');
+}
+
 window.onscroll = () => {
     searchForm.classList.remove('active');
     if(window.scrollY > 80) {

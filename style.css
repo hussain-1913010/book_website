@@ -35,6 +35,20 @@ html::-webkit-scrollbar-track{
 html::-webkit-scrollbar-thumb{
     background: var(--black);
 }
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    border-radius: .5rem;
+    color: white;
+    background: var(--green);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.btn:hover{
+    background: var(--darkColor);
+}
 
 
 
@@ -120,6 +134,147 @@ body{
     height: 300rem;
 }
 
+.bottomNavbar{
+    text-align: center;
+    background: var(--green);
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: none;
+}
+.bottomNavbar a{
+    font-size: 2.5rem;
+    padding: 2rem;
+    color: white;
+}
+.bottomNavbar a:hover{
+    background: var(--darkColor);
+}
+
+.loginFormContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.9);
+    position: fixed;
+    top: 0; right: -105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+.loginFormContainer.active{
+    right: 0;
+}
+
+.loginFormContainer form{
+    background: white;
+    border: var(--border);
+    width: 40rem;
+    padding: 2rem;
+    box-shadow: var(--boxShadow);
+    border-radius: 0.5rem;
+    margin: 2rem;
+}
+
+.loginFormContainer form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+    text-align: center;
+}
+.loginFormContainer form span{
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+.loginFormContainer form .box{
+    width: 100%;
+    margin: .7rem 0;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 1rem 1.2rem; 
+    color: var(--black);
+    text-transform: none;
+}
+.loginFormContainer form .checkbox{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+.loginFormContainer form .checkbox label{
+    font-size: 1.5rem;
+    color: var(--lightColor);
+    cursor: pointer;
+}
+.loginFormContainer form .btn{
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+.loginFormContainer form p{
+    padding-top: 0.8rem;
+    color: var(--lightColor);
+    font-size: 1.5em;
+}
+.loginFormContainer form p a{
+    color: var(--green);
+    text-decoration: underline;
+}
+.loginFormContainer #closeLoginBtn{
+    position: absolute;
+    top: 1.5rem; right: 2.5rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -142,8 +297,19 @@ body{
 }
 
 @media(max-width:768px){
+
+    html{
+        scroll-padding-top: 0;
+    }
+    body{
+        padding-bottom: 6rem;
+    }
+
     .header .header2{
         display: none;
+    }
+    .bottomNavbar{
+        display: block;
     }
     #searchBtn{
         display: inline-block;
