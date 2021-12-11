@@ -35,6 +35,11 @@ html::-webkit-scrollbar-track{
 html::-webkit-scrollbar-thumb{
     background: var(--black);
 }
+
+section{
+    padding: 5rem 9%;
+}
+
 .btn{
     margin-top: 1rem;
     display: inline-block;
@@ -230,11 +235,47 @@ body{
     cursor: pointer;
 }
 
+/* home */
+.home{
+    background: url(./img/banner-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 
-
-
-
-
+}
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.home .row .content{
+    flex: 1 1 42rem;
+}
+.home .row .booksSlider{
+    flex: 1 1 42rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.home .row .booksSlider a img{
+    height: 25rem;
+}
+.home .row .booksSlider a:hover img{
+    transform: scale(0.9);
+}
+.home .row .booksSlider .stand{
+    width: 100%;
+    margin-top: -2rem;
+}
+.home .row .content h3{
+    color: var(--black);
+    font-size: 4.5rem;
+}
+.home .row .content p{
+    color: var(--lightColor);
+    font-size: 1.4rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
 
 
 
@@ -294,6 +335,9 @@ body{
     .header .header1{
         padding: 2rem;
     }
+    section{
+        padding: 3rem 2rem;
+    }
 }
 
 @media(max-width:768px){
@@ -327,6 +371,12 @@ body{
 
     .header .header1 .searchForm.active{
         top: 115%;
+    }
+    .home .row .content{
+        text-align: center;
+    }
+    .home .row .content h3{
+        font-size: 3.5rem;
     }
 }
 

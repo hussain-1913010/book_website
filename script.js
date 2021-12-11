@@ -29,3 +29,24 @@ window.onload = () => {
         document.querySelector('.header .header2').classList.remove('active');
     }
 }
+
+// swiper slider codes
+var swiper = new Swiper(".booksSlider", {
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
