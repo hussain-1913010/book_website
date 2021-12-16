@@ -448,6 +448,55 @@ body{
 
 
 
+.arrivals .arrivalsSlider .box{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    border: var(--border);
+    margin: 1rem 0;
+}
+.arrivals .arrivalsSlider .box:hover{
+    border: var(--borderHover);
+}
+.arrivals .arrivalsSlider .box .image img{
+    height: 15rem;
+}
+.arrivals .arrivalsSlider .box .content h3{
+    font-size: 2rem;
+    color: var(--black);
+}
+.arrivals .arrivalsSlider .box .content .price{
+    font-size: 2.2rem;
+    color: var(--black);
+    padding-bottom: 0.5rem;
+}
+.arrivals .arrivalsSlider .box .content .price span{
+    font-size: 1.5rem;
+    color: var(--lightColor);
+    text-decoration: line-through;
+}
+.arrivals .arrivalsSlider .box .content .stars i{
+    font-size: 1.5rem;
+    color: var(--green);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
