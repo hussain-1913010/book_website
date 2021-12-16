@@ -28,6 +28,8 @@ window.onload = () => {
     }else{
         document.querySelector('.header .header2').classList.remove('active');
     }
+    // onload loader will be called here
+    fadeOut();
 }
 
 // swiper slider codes
@@ -147,3 +149,13 @@ var swiper = new Swiper(".booksSlider", {
     },
   });
 
+
+
+//   for loader
+const loader = () => {
+    document.querySelector(".loaderContainer").classList.add("active");
+}
+
+const fadeOut = () => {
+    setTimeout(loader, 4000);
+}
